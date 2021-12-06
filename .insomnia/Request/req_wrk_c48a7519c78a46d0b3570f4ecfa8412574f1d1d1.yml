@@ -1,0 +1,21 @@
+_id: req_wrk_c48a7519c78a46d0b3570f4ecfa8412574f1d1d1
+type: Request
+parentId: fld_wrk_c48a7519c78a46d0b3570f4ecfa8412512dea96f
+modified: 1638364940021
+created: 1638364940021
+url: "{{ base_url }}/user/{{ username }}"
+name: Get user by user name
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1638364940021
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

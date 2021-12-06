@@ -1,0 +1,21 @@
+_id: req_wrk_c48a7519c78a46d0b3570f4ecfa841256d74493f
+type: Request
+parentId: fld_wrk_c48a7519c78a46d0b3570f4ecfa8412512dea96f
+modified: 1638364940014
+created: 1638364940014
+url: "{{ base_url }}/user/{{ username }}"
+name: Updated user
+description: ""
+method: PUT
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1638364940014
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
