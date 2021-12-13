@@ -1,7 +1,7 @@
 _id: spc_eb8f4dd258224cc0a2d59fe526643078
 type: ApiSpec
 parentId: wrk_c48a7519c78a46d0b3570f4ecfa84125
-modified: 1639424366993
+modified: 1639424490141
 created: 1638364944477
 fileName: Swagger Petstore 1.0.0
 contents: >
@@ -60,13 +60,13 @@ contents: >
                 $ref: '#/components/schemas/Pet'
           required: true
         responses:
-          400:
+          "400":
             description: Invalid ID supplied
             content: {}
-          404:
+          "404":
             description: Pet not found
             content: {}
-          405:
+          "405":
             description: Validation exception
             content: {}
         security:
@@ -90,7 +90,7 @@ contents: >
                 $ref: '#/components/schemas/Pet'
           required: true
         responses:
-          405:
+          "405":
             description: Invalid input
             content: {}
         security:
@@ -122,7 +122,7 @@ contents: >
               - pending
               - sold
         responses:
-          200:
+          "200":
             description: successful operation
             content:
               application/xml:
@@ -135,7 +135,7 @@ contents: >
                   type: array
                   items:
                     $ref: '#/components/schemas/Pet'
-          400:
+          "400":
             description: Invalid status value
             content: {}
         security:
@@ -162,7 +162,7 @@ contents: >
             items:
               type: string
         responses:
-          200:
+          "200":
             description: successful operation
             content:
               application/xml:
@@ -175,7 +175,7 @@ contents: >
                   type: array
                   items:
                     $ref: '#/components/schemas/Pet'
-          400:
+          "400":
             description: Invalid tag value
             content: {}
         deprecated: true
@@ -199,7 +199,7 @@ contents: >
             type: integer
             format: int64
         responses:
-          200:
+          "200":
             description: successful operation
             content:
               application/xml:
@@ -208,10 +208,10 @@ contents: >
               application/json:
                 schema:
                   $ref: '#/components/schemas/Pet'
-          400:
+          "400":
             description: Invalid ID supplied
             content: {}
-          404:
+          "404":
             description: Pet not found
             content: {}
         security:
@@ -241,7 +241,7 @@ contents: >
                     type: string
                     description: Updated status of the pet
         responses:
-          405:
+          "405":
             description: Invalid input
             content: {}
         security:
@@ -266,10 +266,10 @@ contents: >
             type: integer
             format: int64
         responses:
-          400:
+          "400":
             description: Invalid ID supplied
             content: {}
-          404:
+          "404":
             description: Pet not found
             content: {}
         security:
@@ -303,7 +303,7 @@ contents: >
                     description: file to upload
                     format: binary
         responses:
-          200:
+          "200":
             description: successful operation
             content:
               application/json:
@@ -321,7 +321,7 @@ contents: >
         description: Returns a map of status codes to quantities
         operationId: getInventory
         responses:
-          200:
+          "200":
             description: successful operation
             content:
               application/json:
@@ -346,7 +346,7 @@ contents: >
                 $ref: '#/components/schemas/Order'
           required: true
         responses:
-          200:
+          "200":
             description: successful operation
             content:
               application/xml:
@@ -355,7 +355,7 @@ contents: >
               application/json:
                 schema:
                   $ref: '#/components/schemas/Order'
-          400:
+          "400":
             description: Invalid Order
             content: {}
         x-codegen-request-body-name: body
@@ -378,7 +378,7 @@ contents: >
             type: integer
             format: int64
         responses:
-          200:
+          "200":
             description: successful operation
             content:
               application/xml:
@@ -387,10 +387,10 @@ contents: >
               application/json:
                 schema:
                   $ref: '#/components/schemas/Order'
-          400:
+          "400":
             description: Invalid ID supplied
             content: {}
-          404:
+          "404":
             description: Order not found
             content: {}
       delete:
@@ -410,10 +410,10 @@ contents: >
             type: integer
             format: int64
         responses:
-          400:
+          "400":
             description: Invalid ID supplied
             content: {}
-          404:
+          "404":
             description: Order not found
             content: {}
     /user:
@@ -495,7 +495,7 @@ contents: >
           schema:
             type: string
         responses:
-          200:
+          "200":
             description: successful operation
             headers:
               X-Rate-Limit:
@@ -515,7 +515,7 @@ contents: >
               application/json:
                 schema:
                   type: string
-          400:
+          "400":
             description: Invalid username/password supplied
             content: {}
     /user/logout:
@@ -542,7 +542,7 @@ contents: >
           schema:
             type: string
         responses:
-          200:
+          "200":
             description: successful operation
             content:
               application/xml:
@@ -551,10 +551,10 @@ contents: >
               application/json:
                 schema:
                   $ref: '#/components/schemas/User'
-          400:
+          "400":
             description: Invalid username supplied
             content: {}
-          404:
+          "404":
             description: User not found
             content: {}
       put:
@@ -578,10 +578,10 @@ contents: >
                 $ref: '#/components/schemas/User'
           required: true
         responses:
-          400:
+          "400":
             description: Invalid user supplied
             content: {}
-          404:
+          "404":
             description: User not found
             content: {}
         x-codegen-request-body-name: body
@@ -599,10 +599,10 @@ contents: >
           schema:
             type: string
         responses:
-          400:
+          "400":
             description: Invalid username supplied
             content: {}
-          404:
+          "404":
             description: User not found
             content: {}
   components:
