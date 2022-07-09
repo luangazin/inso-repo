@@ -23,7 +23,7 @@ jobs:
         id: check_inso_workspace
         uses: andstor/file-existence-action@v1
         with:
-         files: ".insomnia/ApiSpec"
+         files: ".insomnia/ApiSpec/spc_*.yml"
       
       - name: Exporting openapi from insomnia workspace
         if: steps.check_inso_workspace.outputs.files_exists == 'true'
