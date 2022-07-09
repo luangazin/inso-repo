@@ -24,18 +24,12 @@ jobs:
         uses: andstor/file-existence-action@v1
         with:
          files: ".insomnia/ApiSpec"
-         
-      - name: install insomnia inso
-        if: steps.check_inso_workspace.outputs.files_exists == 'true'
-        run: |
-          npm i -g insomnia-inso@latest
-          echo "Isomnia version: $(inso --version)"
       
       - name: Exporting openapi from insomnia workspace
         if: steps.check_inso_workspace.outputs.files_exists == 'true'
         # Only runs if all of the files exists
         run: |
-          inso export spec "$(cat .insomnia/ApiSpec/spc_*.yml | yq '.fileName')"  --output openapi-swagger.yaml
+          npx inso export spec "$(cat .insomnia/ApiSpec/spc_*.yml | yq '.fileName')"  --output openapi-swagger.yaml
           cat openapi-swagger.yaml
 
           
