@@ -21,6 +21,6 @@ jobs:
       - name: install insomnia inso
         run: |
           npm i -g insomnia-inso@latest
-          echo "Isomnia version: ${inso --version}"
+          echo "Isomnia version: $(inso --version)"
           
 
