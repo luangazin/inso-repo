@@ -20,17 +20,19 @@ jobs:
           node-version: 16
           
       - name: "Check if has insomnia workspace"
+        id: check_inso_workspace
         uses: andstor/file-existence-action@v1
         with:
          files: ".insomnia"
          
       - name: install insomnia inso
+        if: steps.check_inso_workspace.outputs.files_exists == 'true'
         run: |
           npm i -g insomnia-inso@latest
           echo "Isomnia version: $(inso --version)"
       
       - name: Insomnia exists?
-        if: steps.check_files.outputs.files_exists == 'true'
+        if: steps.check_inso_workspace.outputs.files_exists == 'true'
         # Only runs if all of the files exists
         run: echo insomnia exists!
 
