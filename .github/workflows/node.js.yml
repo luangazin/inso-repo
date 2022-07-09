@@ -29,7 +29,7 @@ jobs:
         if: steps.check_inso_workspace.outputs.files_exists == 'true'
         # Only runs if all of the files exists
         run: |
-          npx inso export spec "$(cat .insomnia/ApiSpec/spc_*.yml | yq '.fileName')"  --output openapi-swagger.yaml
+          npx insomnia-inso export spec "$(cat .insomnia/ApiSpec/spc_*.yml | yq '.fileName')"  --output openapi-swagger.yaml
           cat openapi-swagger.yaml
 
           
