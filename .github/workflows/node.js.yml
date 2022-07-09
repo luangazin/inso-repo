@@ -23,7 +23,7 @@ jobs:
         id: check_inso_workspace
         uses: andstor/file-existence-action@v1
         with:
-         files: ".insomnias"
+         files: ".insomnia"
          
       - name: install insomnia inso
         if: steps.check_inso_workspace.outputs.files_exists == 'true'
